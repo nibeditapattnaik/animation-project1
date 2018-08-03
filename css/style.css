@@ -1,0 +1,147 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background: #c9edff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    /* color:grey; */
+}
+
+h1{
+    font-size: 4em;
+    text-shadow: 5px 5px #c9edff, 8px 8px rgba(0,0,0,0.2);
+    margin: 0;
+
+}
+
+h3{
+    font-size:1.5em;
+    margin:0 45px;
+    /* padding-left:1%; */
+    /* padding-right:2%     */
+}
+
+ h3:before, h3:after{
+    content:" ";
+    position: absolute;
+    border-top: 2px solid rgba(0,0,0,.3);
+}
+
+h3:nth-of-type(1):before{
+    width:10%;
+    height: 4%;
+    margin:4% 0 0 -11%;
+    /* padding-right:-5px;; */
+}
+
+h3:nth-of-type(1):after{
+    width:45%;
+    height: 4%;
+    margin:4% 0 0 2%;
+}
+h3:nth-of-type(2){
+    /* margin: 0 160px; */
+    float:right;
+    margin-top: -2%;
+}
+h3:nth-of-type(2):before{
+    width:65%;
+    height: 4%;
+    margin:5% 0 0 -70%;
+    /* padding-right:-5px;; */
+}
+
+h3:nth-of-type(2):after{
+    width:22%;
+    height: 4%;
+    margin:5% 0 0 2%;
+}
+
+h1,h3{
+    transform:matrix(1.00,-0.25,0.00,1.00,0,0);
+-ms-transform:matrix(1.00,-0.25,0.00,1.00,0,0);
+-webkit-transform:matrix(1.00,-0.25,0.00,1.00,0,0);
+
+-webkit-animation: slide-tr 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
+animation: slide-tr 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
+
+text-transform: uppercase;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-tr
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-tr {
+    0% {
+      -webkit-transform: translateY(0) translateX(0);
+              transform: translateY(0) translateX(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px) translateX(100px);
+              transform: translateY(-100px) translateX(100px);
+    }
+  }
+  @keyframes slide-tr {
+    0% {
+      -webkit-transform: translateY(10) translateX(-10) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+              transform: translateY(10) translateX(-10) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+    }
+    100% {
+      -webkit-transform: translateY(-30px) translateX(20px) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+              transform: translateY(-30px) translateX(20px) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+    }
+  }
+
+#container:before{
+    content:"";
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background:rgba(0,0,0,.08);
+    position:fixed;
+    height:700px;
+    width:750px;
+    top:0; bottom:0; left:0; right:0;
+    margin: auto auto auto;
+    
+    transform:matrix(1.00,-0.25,0.00,1.00,0,0);
+    -ms-transform:matrix(1.00,-0.25,0.00,1.00,0,0);
+    -webkit-transform:matrix(1.00,-0.25,0.00,1.00,0,0);
+
+    -webkit-animation: scale-up-hor-center 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-up-hor-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+              transform: scaleX(0.4) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+    }
+    100% {
+      -webkit-transform: scaleX(1) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+              transform: scaleX(1) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+    }
+  }
+  @keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+              transform: scaleX(0.4) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+    }
+    100% {
+      -webkit-transform: scaleX(1) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+              transform: scaleX(1) matrix(1.00,-0.25,0.00,1.00,0,0) ;
+    }
+  }
